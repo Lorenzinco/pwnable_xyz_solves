@@ -1,12 +1,12 @@
-# Xor Writeup
+# 07 Xor Writeup
 
 The challenge makes use of mprotect() which gives us the permissions to write .text
 
 Knowing that the call instruction jumps at the from the instruction end (example):
 
-```asm
-000a call func # call func equals 
-000b           # jmp rip + (000e-000a)
+```x86asm
+000a call func ; call func equals 
+000b           ; jmp rip + (000e-000a)
 000c
 000d
 000e .func
